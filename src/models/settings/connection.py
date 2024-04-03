@@ -20,7 +20,7 @@ class __DBConnectionHandler:
     
     def __enter__(self):
         session_maker = sessionmaker()
-        self.session = session_maker(brind=self.__engine)
+        self.session = session_maker(bind=self.__engine)
         return self
         
     def __exit__(self, exc_type, exc_val, _exc_tb):
